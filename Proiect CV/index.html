@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My CV</title>
+    <title>Sebastian Lontis CV</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <header>
+        <nav class="navbar">
+            <a href="#contact">Contact</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+        </nav>
+        <h1>Lontis Sebastian</h1>
+    </header>
+
     <div class="container">
-        <header>
-            <h1>Lontis Sebastian</h1>
-            <h3>Software Engineer</h3>
-            <img src="images/pozaprofil.jpg" alt="profile picture">
-        </header>
-        <section>
+        <img src="images/pozaprofil.jpg" alt="profile picture">
+        <section class="about-section">
             <h2>About Me</h2>
-            <p>I am a tech enthusiast- fascinated about blockchain in particular. I love music, art, reading  and outdoor activities. I am a curious and abitious person</p>
+            <p>I am a tech enthusiast- fascinated about blockchain in particular. I love music, art, reading and outdoor
+                activities. I am a curious and ambitious person.</p>
         </section>
-        <section>
+        <section id="experience">
             <h2>Experience</h2>
             <table>
                 <tr>
@@ -32,13 +39,23 @@
                     <td>2023-2024</td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>-</td>
-                    <td>2018 - 2020</td>
+                    <td>Real Estate Assistant</td>
+                    <td>Sigur Invest SRL</td>
+                    <td>2021-2022</td>
+                </tr>
+                <tr>
+                    <td>Summer camp volunteer</td>
+                    <td>MWB Romania</td>
+                    <td>2021-2023</td>
+                </tr>
+                <tr>
+                    <td>Digital Transformation- Serious Game</td>
+                    <td>Hochschule Heilbronn</td>
+                    <td>2023</td>
                 </tr>
             </table>
         </section>
-        <section>
+        <section id="Education">
             <h2>Education</h2>
             <table>
                 <tr>
@@ -47,16 +64,61 @@
                     <th>Year</th>
                 </tr>
                 <tr>
-                    <td>Bachelor's Degree</td>
-                    <td>University of ABC</td>
-                    <td>2015 - 2019</td>
+                    <td>Computer science and Engineering</td>
+                    <td>Lucian Blaga University</td>
+                    <td>2021-</td>
+                </tr>
+                <tr>
+                    <td>Software Engineering</td>
+                    <td>Hochschule Heilbronn</td>
+                    <td>2023-2024</td>
                 </tr>
             </table>
         </section>
-        <footer>
-            <p>Email: lontis.seabstian2003@gmail.com</p>
-            <p>Phone: +40 750451502</p>
-        </footer>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>C/C++</li>
+                <li>Java,Pyton</li>
+                <li>Project Management</li>
+                <li>Data Security and Cryptography</li>
+                <li>Electronics</li>
+                <li>Web development</li>
+            </ul>
+        </section>
+        <section id="language">
+            <h2>Language</h2>
+            <ul>
+                <li>Native Romanian</li>
+                <li>C1 English</li>
+                <li>A2 German</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+                 <p>During my studies at Hochschule Heilbronn, I have been involved in several serious game projects. I
+                    have developed a serious game for digital transformation SDG 16. I have also developed a serious game for
+                    learning about blockchain technology. The game is called Trust and Treason and it is a 1v1 card game.
+                    It has 3 lanes: Comunity, Goverment and Judiciary the goal it is to develop your society and destroy your oponents one.
+                 </p>
+                 <p>My other project it is actually this CV. Enjoy</p>
+               
+
+        </section>
+
     </div>
+
+    <footer id="contact">
+        <p>Email: lontis.seabstian2003@gmail.com</p>
+        <p>Phone: +40 750451502</p>
+        <p>Linkedin: Lontis Sebastian</p>
+        <button class="button-57" id="change-color-button"  role="button"><span class="text">change color</span><span>turqoise</span></button>
+
+    </footer>
+
+    <script src="smekerie.js"></script>
 </body>
+
 </html>
