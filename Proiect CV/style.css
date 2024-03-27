@@ -1,19 +1,38 @@
 header {
     text-align: left;
-    margin-bottom: 0px;
-    position: relative;
+    margin-bottom: 10px;
     background-color: #05253b; 
     color: #d7f7ff; 
     margin-top: 50px;
     border-radius: 20px; /* Rounded corners */
     position: relative; /* Add relative positioning to the header */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 5px;
     background-color: rgb(46, 91, 123); 
+}
+
+#scroll-to-bottom,
+#scroll-to-top {
+    position: absolute; 
+    top: 50%;
+    transform: translateY(-50%); 
+    right: 30px; 
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#scroll-to-bottom img,
+#scroll-to-top img {
+    width: 40px;
+    height: 40px;
+    background-color: #aaced8; /* Ajustează culoarea iconitelor */
 }
 
 .navbar {
@@ -29,14 +48,14 @@ body {
     border-radius: 20px; /* Rounded corners */
     overflow: hidden;
 }
-
 .container {
-    max-width: 1500px; 
-    margin: 10px; 
+    max-width: 1300px;
+    margin: 0 auto; /* Center the container horizontally */
     padding: 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+   
 }
 
 img {
@@ -96,7 +115,7 @@ h1 {
     margin-top: 20px;
     margin-left: 20px;
     display: inline-block; /* Display the name and image inline */
-    vertical-align: middle; /* Vertically align the name and image */
+    vertical-align: middle; /* Vertically align the name and image */   
 }
 
 h2 {
@@ -131,13 +150,14 @@ html{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 20px 0;
+        margin: 10px;
+        
 }
 #language{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 20px 0;
+        margin: 10px;
 }
 
 #projects{
@@ -153,6 +173,53 @@ html{
 .about-section p{
         background-color: rgb(236, 240, 241);   
 }
+
+.about-section img{
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-right: 5px;
+}
+
+#experience img{
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-right: 5px;
+}
+
+#education img{
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-right: 5px;
+}
+.skills img {
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-right: 5px;
+}
+
+#language img{
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-right: 5px;
+}
+
+#projects img{
+    width: 30px;
+    height: auto;
+    float: left;
+    margin-right: 5px;
+}
+
+
+
+
+
+
 
 
 /* CSS */
