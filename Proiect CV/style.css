@@ -4,10 +4,10 @@ header {
     background-color: #05253b; 
     color: #d7f7ff; 
     margin-top: 50px;
-    border-radius: 20px; /* Rounded corners */
-    position: relative; /* Add relative positioning to the header */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    border-radius: 20px; 
+    position: relative; 
+    justify-content: center;
+    align-items: center; 
 }
 
 body {
@@ -16,6 +16,10 @@ body {
     padding: 5px;
     background-color: rgb(46, 91, 123); 
 }
+#font-size-select {
+    margin-bottom: 20px;
+}
+
 
 #scroll-to-bottom,
 #scroll-to-top {
@@ -32,7 +36,7 @@ body {
 #scroll-to-top img {
     width: 40px;
     height: 40px;
-    background-color: #aaced8; /* Ajustează culoarea iconitelor */
+    background-color: #aaced8; 
 }
 
 .navbar {
@@ -41,10 +45,10 @@ body {
     overflow: auto;
     justify-content: center;
     background-color: #041c2b; 
-    position: fixed; /* Meniul rămâne fixat în partea de sus */
+    position: fixed;
     top: 0; /* Meniul va fi poziționat în partea de sus */
-    width: 100%; /* Lățimea meniului */
-    z-index: 1000; /* Asigură că meniul este deasupra altor elemente */
+    width: 100%; 
+    z-index: 1000; 
     border-radius: 20px; /* Rounded corners */
     overflow: hidden;
 }
@@ -59,11 +63,11 @@ body {
 }
 
 img {
-    width: 200px; /* Ajustează lățimea imaginii */
-    height: auto; /* Menține proporțiile imaginii */
-    display: block; /* Elimină spațiul suplimentar sub imagine */
-    position: relative; /* Poziționează imaginea relativ */
-    z-index: 1; /* Asigură că imaginea este deasupra meniului */
+    width: 200px;
+    height: auto; 
+    display: block; 
+    position: relative; 
+    z-index: 1; 
 }
 
 .navbar a {
@@ -73,11 +77,11 @@ img {
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    transition: background-color 0.3s; /* Adaugă tranziție pentru culoarea de fundal */
+    transition: background-color 0.3s; 
 }
 
 .navbar a:hover {
-    animation: scale 0.7s ease; /* Ajustează durata animației */
+    animation: scale 0.7s ease; 
     background-color: #2365a0;
 }
 
@@ -99,23 +103,23 @@ th, td {
 
 th {
     background-color: #2c3e50; 
-    color: rgb(255, 255, 255); /* Header text color */
+    color: rgb(255, 255, 255); 
 }
 
 tr:nth-child(even) {
-    background-color: rgb(236, 240, 241); /* Even row background color */
+    background-color: rgb(236, 240, 241); 
 }
 
 ul {
-    float: right; /* Align the list to the right */
+    float: right; 
     background-color: rgb(236, 240, 241); 
 }
 
 h1 {
     margin-top: 20px;
     margin-left: 20px;
-    display: inline-block; /* Display the name and image inline */
-    vertical-align: middle; /* Vertically align the name and image */   
+    display: inline-block;
+    vertical-align: middle; 
 }
 
 h2 {
