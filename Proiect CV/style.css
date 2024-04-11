@@ -16,10 +16,6 @@ body {
     padding: 5px;
     background-color: rgb(46, 91, 123); 
 }
-#font-size-select {
-    margin-bottom: 20px;
-}
-
 
 #scroll-to-bottom,
 #scroll-to-top {
@@ -147,35 +143,36 @@ a {
 
 
 html{
-        scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .skills {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;        
+    margin: 10px;
         
 }
+
 #language{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
 }
 
 #projects{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 #projects p{
-        background-color: rgb(236, 240, 241); 
+    background-color: rgb(236, 240, 241); 
 }
 
 .about-section p{
-        background-color: rgb(236, 240, 241);   
+    background-color: rgb(236, 240, 241);   
 }
 
 .about-section img{
@@ -218,12 +215,6 @@ html{
     float: left;
     margin-right: 5px;
 }
-
-
-
-
-
-
 
 
 /* CSS */
