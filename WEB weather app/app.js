@@ -3,29 +3,57 @@ const apiUrl = 'https://api.openweathermap.org/data/2.5/weather';
 
 const searchInput = document.querySelector('.search-input');
 const searchButton = document.querySelector('.search-button');
+const weatherIcon = document.querySelector('.weather-icon');
 
 async function fetchWeather(city) {
-  const url = `${apiUrl}?q=${city}&units=metric&appid=${apiKey}`;
   try {
-    const response = await fetch(url);
+    const response = await fetch(`${apiUrl}?q=${city}&units=metric&appid=${apiKey}`);
     if (!response.ok) {
       throw new Error('Weather data not available for the specified city');
     }
+
     const data = await response.json();
 
-    console.log(data);
-    document.querySelector('.city').innerText = data.name;
+    document.querySelector('.city').innerText = data.name + ', ' + data.sys.country;
     document.querySelector('.temp').innerText = Math.round(data.main.temp) + '°C';
     document.querySelector('.humidity').innerText = data.main.humidity + '%';
     document.querySelector('.wind').innerText = Math.round(data.wind.speed) + ' km/h';
+
+    switch (data.weather[0].main) {
+      case 'Clear':
+        weatherIcon.src = 'images/sunny.png';
+        break;
+      case 'Clouds':
+        weatherIcon.src = 'images/cloudy.png';
+        break;
+      case 'Rain':
+        weatherIcon.src = 'images/rain.png';
+        break;
+      case 'Snow':
+        weatherIcon.src = 'images/snow.png';
+        break;
+      case 'Mist':
+        weatherIcon.src = 'images/mist.png';
+        break;
+      default:
+        weatherIcon.src = 'images/sunny.png'; 
+    }
+
+    // Hide error message if data is fetched successfully
+    document.querySelector('.error').style.display = 'none';
+    // Show weather details
+    document.querySelector('.weather').style.display = 'block';
   } catch (error) {
-    console.error('Error fetching weather data:', error);
+    // Show error message
+    document.querySelector('.error').innerText = 'Invalid city name';
+    document.querySelector('.error').style.display = 'block';
+    // Hide weather details
+    document.querySelector('.weather').style.display = 'none';
   }
 }
+
 
 searchButton.addEventListener('click', () => {
   const city = searchInput.value;
   fetchWeather(city);
 });
-
-fetchWeather('Sibiu'); 
