@@ -57,3 +57,13 @@ searchButton.addEventListener('click', () => {
   const city = searchInput.value;
   fetchWeather(city);
 });
+
+
+
+document.querySelector('.city').innerText = data.name + ', ' + data.sys.country;
+document.querySelector('.main-weather').innerText = data.weather[0].description;
+document.querySelector('.temp').innerText = Math.round(data.main.temp) + '°C';
+document.querySelector('.humidity').innerText = data.main.humidity + '%';
+document.querySelector('.wind').innerText = Math.round(data.wind.speed) + ' km/h';
+document.querySelector('.feels-like').innerText = Math.round(data.main.feels_like) + '°C';
+document.querySelector('.pressure').innerText = data.main.pressure + ' hPa';

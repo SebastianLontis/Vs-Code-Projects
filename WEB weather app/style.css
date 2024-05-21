@@ -9,20 +9,13 @@ body {
   align-items: flex-start; /* Align items at the top */
 }
 
-.card,
-.Music {
-  width: 45%;
-  max-width: 500px;
-  margin: 100px 0 0 20px;
-}
-
 .card {
-  width: 45%;
+  width: 30%;
   height: 80vh; /* Adjust the height as needed */
   max-width: 500px;
   background: linear-gradient(135deg, #7fefea 0%, #084b52 100%);
   color: #fff;
-  margin: 30px 0 0 20px;
+  margin: 30px 0 0 0; /* Adjust margin to move the card to the left */
   padding: 40px 20px;
   border-radius: 20px;
   text-align: center;
@@ -152,13 +145,14 @@ body {
 /* Path: spotify.js */
 
 .Music {
-  width: 45%;
+  width: 55%;
   margin: 30px 0 0 20px;
   max-height: calc(100vh - 67px); /* Adjust the max height */
   overflow-y: hidden; /* Hide the scrollbar */
   color: #fff;
   border-radius: 20px;
-  background-color: #1c322d;
+  /* background-color: #1c322d; */
+  background: linear-gradient(135deg, #001e1c 0%, #084b52 100%);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   z-index: 999;
   padding: 20px;
@@ -201,14 +195,16 @@ body {
 .playlist-item {
   padding: 10px;
   margin-bottom: 10px;
-  background-color: #333;
+  /* background-color: #333; */
+  background: linear-gradient(135deg, #00ac9826 0%, #084552 100%);
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .playlist-item:hover {
-  background-color: #444;
+  /* background-color: #444; */
+  background-color: #0e675c;
 }
 
 .playlist-item img {
@@ -238,6 +234,34 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
+/* Adjust width and layout of playlist items */
+.playlist-item {
+  display: inline-block;
+  width: calc(33.33% - 110px); /* Three items per row */
+  margin: 10px;
+  text-align: left;
+  vertical-align: top;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure playlist item details are centered */
+.playlist-item .details {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ensure playlist item image maintains aspect ratio */
+.playlist-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: auto;
+}
+
 
 a:hover {
   color: rgb(51, 211, 75);

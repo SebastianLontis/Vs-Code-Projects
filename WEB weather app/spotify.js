@@ -61,14 +61,30 @@ async function getPlaylist(accessToken, playlistId) {
   return data;
 }
 
-// Function to display a playlist
+// Function to display a playlist with images and limited songs
 function displayPlaylist(playlist) {
   const playlistDiv = document.getElementById('playlist');
   playlistDiv.innerHTML = `<h2><a href="${playlist.external_urls.spotify}" target="_blank">${playlist.name}</a></h2>`;
-  playlist.tracks.items.forEach(item => {
-    playlistDiv.innerHTML += `<p><a href="${item.track.external_urls.spotify}" target="_blank">${item.track.name} by ${item.track.artists[0].name}</a></p>`;
-  });
+  
+  // Limit the number of songs to display
+  const numSongs = Math.min(playlist.tracks.items.length, 20);
+  
+  // Loop through the songs and display them with images
+  for (let i = 0; i < numSongs; i++) {
+    const item = playlist.tracks.items[i];
+    playlistDiv.innerHTML += `<div class="playlist-item">
+      <a href="${item.track.external_urls.spotify}" target="_blank">
+        <img src="${item.track.album.images[0].url}" alt="Album cover">
+        <div class="details">
+          <h3>${item.track.name}</h3>
+          <p>by ${item.track.artists[0].name}</p>
+        </div>
+      </a>
+    </div>`;
+  }
 }
+
+
 
 // Function to fetch weather data and display playlist
 async function fetchWeather(city) {
