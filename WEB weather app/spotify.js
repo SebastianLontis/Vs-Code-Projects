@@ -64,7 +64,7 @@ async function getPlaylist(accessToken, playlistId) {
 // Function to display a playlist with images and limited songs
 function displayPlaylist(playlist) {
   const playlistDiv = document.getElementById('playlist');
-  playlistDiv.innerHTML = `<h2><a href="${playlist.external_urls.spotify}" target="_blank">${playlist.name}</a></h2>`;
+  playlistDiv.innerHTML = `<h2 id="playlist-title"><a href="${playlist.external_urls.spotify}" target="_blank">${playlist.name}</a></h2>`;
   
   // Limit the number of songs to display
   const numSongs = Math.min(playlist.tracks.items.length, 20);
