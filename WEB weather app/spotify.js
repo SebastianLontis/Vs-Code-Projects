@@ -151,3 +151,10 @@ searchButton.addEventListener('click', () => {
   const city = searchInput.value;
   fetchWeather(city);
 });
+
+searchInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const city = searchInput.value;
+    fetchWeather(city);
+  }
+});
